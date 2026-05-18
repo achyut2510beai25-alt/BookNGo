@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Theatre & Comedy | BookNGo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-category="theatre">
+
+  <nav class="navbar">
+    <img src="BookNGo.png" alt="Logo" class="logo">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li id="nav-login-li"><a href="login.html" class="login-btn">Login</a></li>
+      <li id="nav-user-li" style="display:none">
+        <div class="nav-user-pill">
+          👤 <span id="nav-username"></span>
+          <button id="logout-btn">Logout</button>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="events-hero">
+    <h1>Theatre & <span>Comedy Shows</span></h1>
+    <p>Stage plays, musicals & the best standup comedy acts</p>
+  </section>
+
+  <div class="filter-bar">
+    <label for="filter-city">📍 City:</label>
+    <select id="filter-city">
+      <option value="all">All Cities</option>
+    </select>
+    <label for="filter-sort">↕ Sort By:</label>
+    <select id="filter-sort">
+      <option value="date">Date (Earliest)</option>
+      <option value="price-asc">Price: Low → High</option>
+      <option value="price-desc">Price: High → Low</option>
+    </select>
+  </div>
+
+  <div class="big-cards" id="filtered-cards"></div>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-col">
+        <img src="BookNGo.png" alt="Logo" class="footer-logo">
+        <p>Your one stop destination for booking concerts, sports, movies & theatre.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <p>📧 support@bookngo.in</p>
+        <p>📞 +91 98765 43210</p>
+        <p>📍 Mumbai, India</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 BookNGo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
