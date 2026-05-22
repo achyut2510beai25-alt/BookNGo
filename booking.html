@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Booking | BookNGo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <img src="BookNGo.png" alt="Logo" class="logo">
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+
+      <li id="nav-login-li">
+        <a href="login.html" class="login-btn">Login</a>
+      </li>
+
+      <li id="nav-user-li" style="display:none">
+        <a href="mybookings.html" class="profile-link">
+          👤 <span id="nav-username"></span>
+        </a>
+      </li>
+
+      <li id="logout-li" style="display:none">
+        <button id="logout-btn" class="logout-simple">Logout</button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="events-hero">
+    <h1>Complete Your <span>Booking</span></h1>
+    <p>Select your seats and confirm your experience</p>
+  </section>
+
+  <!-- BOOKING -->
+  <div class="booking-wrap">
+
+    <!-- LEFT -->
+    <div class="booking-left">
+
+      <!-- EVENT INFO -->
+      <div class="booking-panel">
+        <h3>🎵 Event Details</h3>
+
+        <div class="event-info">
+        <p>
+  <strong id="event-name">
+    Arijit Singh Live
+  </strong>
+</p>
+          <p id="event-date">
+  📅 May 15, 2026
+</p>
+          <p>⏰ 7:00 PM</p>
+         <p id="event-city">
+  📍 Mumbai
+</p>
+        </div>
+      </div>
+
+      <!-- SEAT MAP -->
+      <div class="booking-panel">
+        <h3>
+          🪑 Select Your Seats
+          <small>(max 6)</small>
+        </h3>
+
+        <div class="screen-indicator">
+          ◀ STAGE / SCREEN ▶
+        </div>
+
+        <!-- JS BUILDS SEATS -->
+        <div id="seat-map"></div>
+
+        <!-- LEGEND -->
+        <div class="seat-legend">
+
+          <div class="legend-item">
+            <div class="legend-dot available"></div>
+            Available
+          </div>
+
+          <div class="legend-item">
+            <div class="legend-dot selected"></div>
+            Selected
+          </div>
+
+          <div class="legend-item">
+            <div class="legend-dot booked"></div>
+            Booked
+          </div>
+
+          <div class="legend-item platinum-text">
+            ■ Platinum ₹4500
+          </div>
+
+          <div class="legend-item gold-text">
+            ■ Gold ₹2500
+          </div>
+
+          <div class="legend-item silver-text">
+            ■ Silver ₹1500
+          </div>
+
+        </div>
+      </div>
+
+      <!-- USER DETAILS -->
+      <div class="booking-panel">
+
+        <h3>👤 Your Details</h3>
+
+        <input
+          type="text"
+          id="b-name"
+          class="b-input"
+          placeholder="Full Name"
+        >
+
+        <input
+          type="email"
+          id="b-email"
+          class="b-input"
+          placeholder="Email Address"
+        >
+
+        <input
+          type="tel"
+          id="b-phone"
+          class="b-input"
+          placeholder="Phone Number"
+        >
+
+        <p id="booking-err" class="err-msg"></p>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="order-summary">
+
+      <h3>Order Summary</h3>
+
+      <div class="summary-row">
+        <span>Event</span>
+       <span id="summary-event">
+  Arijit Singh Live
+</span>
+      </div>
+
+      <div class="summary-row">
+        <span>Date</span>
+       <span id="summary-date">
+  May 15, 2026
+</span>
+      </div>
+
+      <div class="summary-row">
+        <span>Venue</span>
+       <span id="summary-city">
+  Mumbai
+</span>
+      </div>
+
+      <div class="summary-divider"></div>
+
+      <div class="summary-row">
+        <span>Seats Selected</span>
+        <span id="selected-count">0</span>
+      </div>
+
+      <div
+        class="selected-seats-wrap"
+        id="selected-seats-list"
+      >
+        <span class="empty-seat-text">
+          No seats selected yet
+        </span>
+      </div>
+
+      <div class="summary-divider"></div>
+
+      <div class="summary-row total">
+        <span>Total</span>
+        <span id="booking-total">₹0</span>
+      </div>
+
+      <button id="confirm-btn" class="btn confirm-btn">
+        Confirm Booking
+      </button>
+
+      <p class="secure-txt">
+        🔒 100% Secure & Safe Payment
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- CONFIRM MODAL -->
+  <div class="confirm-overlay" id="confirm-overlay">
+
+    <div class="confirm-box">
+
+      <div class="tick">🎉</div>
+
+      <h2>Booking Confirmed!</h2>
+
+    <p>
+  Hey <strong id="conf-name"></strong>,
+  your booking is confirmed.
+</p>
+
+     <p>
+  Seats:
+  <span id="conf-seats"></span>
+</p>
+      <p>
+        Total Paid:
+        <strong id="conf-total"></strong>
+      </p>
+
+      <button
+        class="btn"
+        onclick="window.location.href='mybookings.html'"
+      >
+        View My Bookings
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

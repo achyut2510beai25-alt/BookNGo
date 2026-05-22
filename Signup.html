@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sign Up | BookNGo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+
+  <div class="auth-box">
+    <img src="BookNGo.png" alt="BookNGo Logo" class="auth-logo">
+    <h2>Create Account</h2>
+    <p class="sub">Join BookNGo and start booking today</p>
+
+    <input type="text"     id="signup-name"  class="auth-input" placeholder="Username (min 3 chars)">
+    <input type="email"    id="signup-email" class="auth-input" placeholder="Email Address">
+    <input type="password" id="signup-pwd"   class="auth-input" placeholder="Password (min 6 chars)">
+    <input type="password" id="signup-cpwd"  class="auth-input" placeholder="Confirm Password">
+
+    <button id="signup-btn-id" class="auth-btn">Create Account</button>
+
+    <p id="signup-err" class="err-msg"></p>
+    <p id="signup-ok"  class="ok-msg"></p>
+
+    <p class="auth-switch">
+      Already have an account? <a href="login.html">Login</a>
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
